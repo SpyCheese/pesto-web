@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Пользователи - pesto-web</title>
+    </head>
+
+    <body>
+        <table border="1" width="500">
+            <tr>
+                <td><b>Фамилия, имя</b></td>
+            </tr>
+            {% for user in users %}
+                <tr>
+                    <td><a href="/user/{{ user.id }}">{{ user.last_name }} {{ user.first_name }}</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
