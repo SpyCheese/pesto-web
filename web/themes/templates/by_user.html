@@ -1,0 +1,14 @@
+<style>
+.stats td{vertical-align:top}
+.themes td{border:1px solid gray;padding:2px;}
+.themes{border-collapse:collapse}
+</style>
+<table class="stats"><tr>
+{% for year,year_res in result %}
+    <td><b>{{ year }}:</b> <table class="themes">
+    {% for theme, count in year_res %}
+        <tr><td>{{ theme }}</td><td>{{ count }}</td></tr>
+    {% endfor %}
+    </table></td>
+{% endfor %}
+</tr></table>
