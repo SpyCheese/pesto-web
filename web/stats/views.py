@@ -21,6 +21,9 @@ def users(request):
     users = User.objects.order_by('last_name', 'first_name')
     return render(request, 'users.html', {'users': users})
 
+def home(request):
+    return render(request, 'home.html')
+
 @staff_member_required
 def admin_themes(request):
     seasons = []
